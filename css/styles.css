@@ -1,0 +1,521 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f49f00+0,c47527+95 */
+  background: #f49f00;
+  font-family: 'Audiowide', cursive;
+  letter-spacing: 4px;
+  color: #431905;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  background-attachment: fixed;
+}
+#vignette{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,000000+100&0+0,0.27+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,0) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,0) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(30,87,153,0) 0%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#45000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  position:   fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 110;
+  pointer-events: none;
+}
+.scanlines {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #222233bd 25%, #44550036 25%, #4411006b 50%, #0c100240 50%, #22110000 75%, #220000a8 75%, #00000052);
+  background-size: 6px 6px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index:  111;
+  pointer-events: none;
+  animation: flicker 0.25s infinite;
+}
+#logo{
+  width: 245px;
+  height: 325px;
+  position: relative;
+  margin:   0px auto 35px auto;
+
+}
+#logo div {
+  width:  100%;
+  height:   100%;
+  background: url(../images/Logo.png) center top no-repeat;
+  background-size:  100%;
+  margin: 0px auto 55px auto;
+  animation: glitch1 2.5s infinite;
+  position:   absolute; 
+  top:  0px ;
+}
+.no-animate{animation: none !important;}
+.hide{display:none;}
+
+#logo div:nth-child(2) {
+  background: url(../images/Logo.png) center top no-repeat;
+  animation: glitch2 2.5s infinite;
+  background-size: 100%;
+}
+
+#logo div:nth-child(3) {
+  background: url(../images/Logo.png) center top no-repeat;
+  animation: glitch3 2.5s infinite;
+  background-size: 100%;
+}
+.logo-scale{
+  -webkit-transition: all 0.5s ease;  
+  -moz-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  -ms-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+
+.logo-scale-active{
+  width: 95px !important;
+  height: 130px !important;
+}
+
+#solaris{
+  width: 786px;
+  height: 147px;
+  position: relative;
+}
+
+#solaris div {
+  width: 150px;
+  height: 30px;
+  background: url(../images/solarisType.png) center top no-repeat;
+  background-size:  100%;
+  margin: 20px;
+  animation: glitch1 2.5s infinite;
+  position:   absolute;
+  top:  0px;
+}
+
+#solaris div:nth-child(2) {
+  background: url(../images/solarisType.png) center top no-repeat;
+  animation: glitch2 2.5s infinite;
+  background-size: 100%;
+}
+
+#solaris div:nth-child(3) {
+  background: url(../images/solarisType.png) center top no-repeat;
+  animation: glitch3 2.5s infinite;
+  background-size: 100%;
+}
+.solaris-scale{
+  -webkit-transition: all 0.5s ease;  
+  -moz-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  -ms-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+
+.solaris-scale-active{
+  width: 95px !important;
+  height: 130px !important;
+}
+
+
+#wrapper{
+  width:960px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 440px;
+}
+.wrapper-child{
+  position: absolute;
+  width: 100%;
+}
+.pot{
+  -webkit-animation:linear infinite alternate;
+  -webkit-animation-name: run;
+  background: url(../images/solarisTarget.png) center top no-repeat;
+  background-size: 100%;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+}  
+.success{
+  background: url(../images/solarisTargetSuccess.png);
+  background-size: 100%;
+  background-position: 0px -1px;
+}   
+.failed{
+  background: url(../images/solarisTargetFail.png);
+  background-size: 100%;
+  background-position: 0px -1px;
+} 
+#marker{
+  background: url(../images/hackerMarker.png) center top no-repeat;
+  background-size: 100%;
+  top: -25px;
+  width: 50px;
+  height: 185px;
+  position: absolute;
+}
+.meter{
+  background:url(../images/hackerMeterNew.png) center top no-repeat;
+  background-size: 100%;
+  width:100%;
+  height:50px;
+  position: absolute;
+  float: left;
+}
+#message{
+  display: none;
+  text-align: center;
+  width: 100%;
+
+  text-transform: uppercase;
+}
+#start,
+#restart{
+  color: #fff;
+  padding: 7px 10px 10px 10px;
+  background: url(../images/btnBG.png) center top no-repeat;
+  background-size:  100%;
+  text-align:center;
+  margin: 0px auto;
+  cursor: pointer;
+  opacity:0.8;
+  width: 25%;
+}
+#start:hover,
+#restart:hover{
+    top:-1px;
+    opacity:1;
+}
+#start:active,
+#restart:active{
+  top:1px;
+}
+
+
+#game{
+  display:none;
+  position:   relative;
+}
+
+.score{
+  position: relative;
+  width: 330px;
+  margin: 0px auto;
+  clear: both;
+  bottom: -100px;
+}
+.point{
+  width:  100px;
+  height: 3px;
+  position: relative;
+  float: left;
+  margin-left:  10px;
+  background:rgba(0,0,0,0.3);
+}
+.fill{
+  background: #2383ff;
+  /*OUTTER GLOW */  
+  -webkit-box-shadow:0 0 20px #2383ff; 
+  -moz-box-shadow: 0 0 20px #2383ff; 
+  box-shadow:0 0 20px #2383ff;
+
+}
+
+.fade-in{
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+   -o-animation: fadein 2s; /* Opera < 12.1 */
+      animation: fadein 2s;
+}
+
+
+ul.trackers{
+  top: 160px;
+  width: 920px;
+  position: relative;
+  margin: 0px auto;
+  clear: both;
+}
+.trackers  li{
+  width: 32%;
+  position: relative;
+  clear:  both;
+  text-align: center;
+  display: inline-block;
+}
+.trackers  li  p{
+  font-family: courier, sans-serif;
+  font-size: 14px;
+  line-height:  0px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+  font-weight:  bold;
+}
+.trackers > li div {
+  position: relative;
+  clear: both;
+  font-size:20px;
+}
+#wrapper.screenshot{
+  transform: none;
+  position: static;
+}
+
+.progress{
+      position: relative;
+      top: 184px;
+      text-align: center;
+      border-top: dotted 1px;
+      padding-top: 10px;
+}
+.total-completes  p{
+  margin-bottom: 16px !important;
+}
+#contribute-number::before{
+  font-size: 14px;
+  position: absolute;
+  content: "[";
+  left: -7px;
+  top: 26px;
+}
+#contribute-number::after{
+  font-size: 14px;
+  position: absolute;
+  content: "]";
+  right: -7px;
+  top: 26px;
+}
+#contribute-number{
+  width:  100%;
+  height:   10px;
+}
+#contribute-bar{
+  height:   10px;
+    background: #2383ff;
+  -webkit-box-shadow: 0 0 20px #2383ff;
+  -moz-box-shadow: 0 0 20px #2383ff;
+  box-shadow: 0 0 20px #2383ff;
+}
+#share{
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+#share svg{
+  position: relative;
+  fill: #431905;
+  top: 9px;
+}
+canvas{
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* SETTING KEYFRAME ANNIMATIONS */
+
+@-webkit-keyframes run {
+    0% { left: 0px;}
+    50%{ left : 900px;}
+    100%{ left: 0px;}
+}
+
+@keyframes flicker {
+  0% {
+  opacity: 0.27861;
+  }
+ 
+  50% {
+  opacity: 0.34;
+  }
+ 
+  100% {
+  opacity: 0.24387;
+  }
+}
+
+
+
+
+/*Keyframes*/
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
